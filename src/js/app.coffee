@@ -10,7 +10,9 @@ Himesama             = require 'himesama'
 
 # State
 initState 
+  paperCount: 0
   paperIndex: 0
+  archive:    []
   paper:
     title:    ''
     date:     ''
@@ -19,33 +21,19 @@ initState
 # Components
 Main = require './main'
 
+# Fetch
+Fetch = require './fetch'
+
 
 App = Himesama.createClass
 
-  loadPaper: (req) ->
-    req     = req.split '|||'
-    title   = req[0]
-    date    = req[1]
-    content = _.map (req.slice 2), (p_) ->
-      text: p_.slice 1
-      type: p_[0]
-
-    @setState paper:
-      title:    title
-      date:     date
-      content:  content
-
-
-
-
   render: -> 
 
-    xml = new XMLHttpRequest()
-    xml.onreadystatechange = =>
-      if xml.readyState is 4 and xml.status is 200
-        @loadPaper xml.responseText
-    xml.open 'GET', 'http://chadtech-online-1.github.io/0.txt', true
-    xml.send null
+    setPaper = (payload) =>
+      @setState paper: payload
+
+    Fetch.config (payload) ->
+      Fetch.paper payload.paperCount - 1, setPaper
 
 
     div null, 
