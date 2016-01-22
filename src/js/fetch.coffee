@@ -1,5 +1,5 @@
 # Libraries
-_                    = require 'lodash'
+_ = require 'lodash'
 
 # Utilities
 root = 'http://chadtech-online-1.github.io/'

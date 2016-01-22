@@ -35,9 +35,9 @@ App = Himesama.createClass
     Fetch.config (payload) ->
       Fetch.paper payload.paperCount - 1, setPaper
 
-
     div null, 
       Main null
+
 
 Render App(), getElementById 'mount'
 
