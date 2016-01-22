@@ -3,10 +3,11 @@ _                    = require 'lodash'
 
 # Utilities
 root = 'http://chadtech-online-1.github.io/'
-papersURL = (i) -> root + i + '.txt'
+getURL = (i) -> root + i + '.txt'
 
 
 module.exports = Fetch =
+
 
   paper: (papersIndex, next) ->
     xml = new XMLHttpRequest()
@@ -25,8 +26,9 @@ module.exports = Fetch =
           date:     date
           content:  content 
 
-    xml.open 'GET', (papersURL papersIndex), true
+    xml.open 'GET', (getURL papersIndex), true
     xml.send null
+
 
   config: (next) ->
     xml = new XMLHttpRequest()
@@ -38,5 +40,5 @@ module.exports = Fetch =
           paperCount: res.length
           archive:    res
 
-    xml.open 'GET', (papersURL 'config'), true
+    xml.open 'GET', (getURL 'config'), true
     xml.send null      
