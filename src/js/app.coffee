@@ -29,11 +29,25 @@ App = Himesama.createClass
 
   render: -> 
 
-    setPaper = (payload) =>
-      @setState paper: payload
+    entryNumber = getElementById 'entry-number'
+    if entryNumber?
+      entryNumber    = entryNumber.getAttribute 'number'
+      entryNumber    = parseInt entryNumber
+    else entryNumber = undefined
 
-    Fetch.config (payload) ->
-      Fetch.paper payload.paperCount - 1, setPaper
+    setPaper = (payload) =>
+      @setState 
+        paper:      payload
+        paperIndex: entryNumber
+
+    setArchive = (payload) =>
+      @setState payload
+
+    Fetch.config (payload) =>
+      setArchive payload
+      al          = payload.archive.length
+      entryNumber = al - 1 unless entryNumber?
+      Fetch.paper entryNumber, setPaper
 
     div null, 
       Main null

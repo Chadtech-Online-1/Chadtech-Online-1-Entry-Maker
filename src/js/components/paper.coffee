@@ -16,14 +16,20 @@ module.exports = Paper = Himesama.createClass
 
     content = _.map content, 
       (section, i) ->
-        text = section.text
+        {text, type} = section
         text = text.split '\n\n'
         section.text = text
         _.map section.text, ( _p, j ) ->
           _p = '* ' + i + ' ' + _p if j is 0
 
-          [
-            p className: 'point', _p
+          cl  = 'point'
+          cl += ' logic' if type is 'l'
+
+          _p = _.map (_p.split '\n'), 
+            (__p) -> p className: cl, __p
+
+          _.flatten [
+            _p
             br null
           ]
 

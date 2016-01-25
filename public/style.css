@@ -42,6 +42,13 @@ body {
 .point.date {
   color: #a0968a;
 }
+.point.archive-item {
+  color: #808f60;
+  cursor: pointer;
+}
+.point.archive-item:hover {
+  color: #8bcf4b;
+}
 .point-section {
   font-family: HFNSS;
   color: #b0a69a;
@@ -74,17 +81,20 @@ body {
 .paper {
   padding-left: 2em;
   padding-top: 2em;
-  width: 1000px;
+  width: 968px;
   float: left;
 }
 .archive {
-  width: 300px;
+  width: 440px;
   float: right;
 }
 .column {
   float: left;
   position: relative;
-  width: 530px;
+  width: 250px;
+}
+.column.big {
+  width: 440px;
 }
 .mount {
   margin: 0;

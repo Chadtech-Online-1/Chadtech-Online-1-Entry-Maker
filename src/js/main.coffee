@@ -5,7 +5,6 @@ Himesama = require 'himesama'
 
 # DOM
 { div } = DOM
-# { row, column, point } = require './components/ct-dom'
 
 Title         = require './components/title'
 HorizontalBar = require './components/horizontal-bar'

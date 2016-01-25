@@ -18,7 +18,7 @@ titleColor      = #a0968a
 // pointColor = #c0c0c0
 
 importantText   = #b39f4b
-importanterText   = #e3d34b
+importanterText = #e3d34b
 
 // importantText   = #f3d31b
 
@@ -71,6 +71,11 @@ body
     color ignorable
   &.date
     color titleColor
+  &.archive-item
+    color   #808f60
+    cursor  pointer
+    &:hover
+      color #8bcf4b
     
 .point-section
   font-family             HFNSS
@@ -108,17 +113,19 @@ body
 .paper
   padding-left 2em
   padding-top  2em
-  width 1000px
+  width 968px
   float left
 
 .archive
-  width 300px
+  width 440px
   float right
   
 .column  
   float         left 
   position      relative
-  width         530px
+  width         250px
+  &.big
+    width 440px
     
 
 .mount

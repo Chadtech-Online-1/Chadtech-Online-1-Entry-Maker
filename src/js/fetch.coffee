@@ -12,7 +12,8 @@ module.exports = Fetch =
   paper: (papersIndex, next) ->
     xml = new XMLHttpRequest()
     xml.onreadystatechange = =>
-      if xml.readyState is 4 and xml.status is 200
+      { readyState, status } = xml
+      if readyState is 4 and status is 200
 
         res     = xml.responseText.split '|||'
         title   = res[0]
@@ -26,6 +27,9 @@ module.exports = Fetch =
           date:     date
           content:  content 
 
+    papersIndex = papersIndex.toString()
+    until papersIndex.length is 3
+      papersIndex = '0' + papersIndex
     xml.open 'GET', (getURL papersIndex), true
     xml.send null
 
@@ -33,7 +37,8 @@ module.exports = Fetch =
   config: (next) ->
     xml = new XMLHttpRequest()
     xml.onreadystatechange = =>
-      if xml.readyState is 4 and xml.status is 200
+      { readyState, status } = xml
+      if readyState is 4 and status is 200
 
         res = xml.responseText.split '\n'
         next
