@@ -24,6 +24,7 @@ importanterText = #e3d34b
 
 
 ignorable       = #807872
+veryIgnorable   = #54574d
 // backgroundColor = #040a0e
 // backgroundColor = #080703
 // totalBlack      = #060a00
@@ -71,6 +72,9 @@ body
     color ignorable
   &.date
     color titleColor
+  &.name
+    // color #60708f
+    color #6a7886
   &.archive-item
     color   #808f60
     cursor  pointer
@@ -117,7 +121,7 @@ body
   float left
 
 .archive
-  width 440px
+  width 420px
   float right
   
 .column  
@@ -127,6 +131,20 @@ body
   &.big
     width 440px
     
+.field
+  background-color     backgroundColor
+  border-style         solid
+  border-width         2px
+  border-color         veryIgnorable
+  font-family          HFNSS
+  color                veryIgnorable
+  font-size            standardSize
+  outline              none
+  width                400px
+  margin-top           2px
+  &.error
+    border-color       red
+    color              red
 
 .mount
   margin    0

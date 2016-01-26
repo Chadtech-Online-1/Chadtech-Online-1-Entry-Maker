@@ -6,6 +6,8 @@ Himesama = require 'himesama'
 # DOM
 { div, p, input, br } = DOM
 
+Conversation = require './conversation'
+
 # Fetch
 Fetch = require '../fetch'
 
@@ -42,11 +44,17 @@ module.exports = Archive = Himesama.createClass
     if paperIndex is 0
       previousButton = p className: 'point ignorable', 'previous'
 
+
+
     div className: 'archive',
 
       previousButton
 
       nextButton
+
+      br null
+
+      Conversation null
 
       br null
       

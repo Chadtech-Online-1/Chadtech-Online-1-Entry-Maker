@@ -1,10 +1,10 @@
 # Dependencies
 _        = require 'lodash'
 Himesama = require 'himesama'
-{ DOM }  = Himesama
+Parse    = require 'parse'
 
 # DOM
-{ div, p, br } = DOM
+{ div, p, br } = Himesama.DOM
 
 
 module.exports = Paper = Himesama.createClass
