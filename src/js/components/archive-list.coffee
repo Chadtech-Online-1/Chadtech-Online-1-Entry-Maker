@@ -45,7 +45,6 @@ module.exports = Archive = Himesama.createClass
       previousButton = p className: 'point ignorable', 'previous'
 
 
-
     div className: 'archive',
 
       previousButton
