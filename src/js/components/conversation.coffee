@@ -27,9 +27,7 @@ Message = require './message-input'
 
 module.exports = Conversation = Himesama.createClass
 
-  needs: [
-    'posts'
-  ]
+  needs: [ 'posts' ]
 
   submit: ->
     { name, email, message } = @state
@@ -51,9 +49,10 @@ module.exports = Conversation = Himesama.createClass
       Post = Parse.Object.extend 'post'
       post = new Post()
 
-      post.set 'content', message
-      post.set 'name',    name
-      post.set 'email',   email
+      post.set 'content',  message
+      post.set 'name',     name
+      post.set 'email',    email
+      post.set 'verified', false
 
       dewit = =>
         InitConversation @setState
@@ -63,11 +62,15 @@ module.exports = Conversation = Himesama.createClass
         error: (err) ->
           console.log 'Error :^(', err
 
+      @setState 
+        name:     '^'
+        message:  '^'
+        email:    '^'
+
 
 
   render: ->
     { posts, message, email, name } = @state
-    posts = posts.reverse() if posts?
 
     div null,
       p 
@@ -75,9 +78,7 @@ module.exports = Conversation = Himesama.createClass
         'Conversation'
 
       Name()
-
       Email()
-
       Message()
 
       p

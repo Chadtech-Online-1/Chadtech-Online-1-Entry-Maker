@@ -57,6 +57,7 @@ initState
     date:     ''
     content:  []
 
+
 App = Himesama.createClass
 
   render: -> 

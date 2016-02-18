@@ -3,7 +3,7 @@ _ = require 'lodash'
 
 # Utilities
 # root = 'http://chadtech-online-1.github.io/'
-root = 'http://www.chadtech.us/'
+root   = 'http://www.chadtech.us/'
 getURL = (i) -> root + i + '.txt'
 
 

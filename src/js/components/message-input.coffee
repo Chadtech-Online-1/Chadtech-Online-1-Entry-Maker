@@ -19,7 +19,8 @@ module.exports = MessageInput = Himesama.createClass
 
   render: ->
     { message } = @state
-    message = 'message' if message is '^'
+    if message is '^'
+      message = 'message (will appear after review)'
   
     textarea
       className: 'field'

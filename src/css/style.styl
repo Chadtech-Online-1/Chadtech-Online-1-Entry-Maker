@@ -14,20 +14,13 @@ cellHeight      = 19px
 
 pointColor      = #b0a69a
 titleColor      = #a0968a
-// pointColor      = #c0c0c0
-// pointColor = #c0c0c0
 
 importantText   = #b39f4b
 importanterText = #e3d34b
 
-// importantText   = #f3d31b
-
-
 ignorable       = #807872
 veryIgnorable   = #54574d
-// backgroundColor = #040a0e
-// backgroundColor = #080703
-// totalBlack      = #060a00
+
 almostBlack     = #182406
 backgroundColor = #000000
 totalBlack      = #000000
@@ -37,17 +30,14 @@ red             = #f20723
   
 
 body
-  background    backgroundColor
-  padding       0
-  margin        0
+  background              backgroundColor
+  padding                 0
+  margin                  0
   
 .header
   font-family             HFNSS
   color                   titleColor
   font-size               biggerSize
-  // font-smooth             never
-  // webkit-font-smoothing   none
-  // -webkit-font-smoothing  none
   margin                  0 
   &.banner
     color                 ignorable
@@ -57,37 +47,31 @@ body
   font-family             HFNSS
   color                   pointColor
   font-size               standardSize
-  // font-smooth             never
-  // webkit-font-smoothing   none
-  // -webkit-font-smoothing  none
   margin                  0 
   &.logic
-    font-family HFLLG
+    font-family           HFLLG
   &.link
-    color importantText
-    cursor pointer
+    color                 importantText
+    cursor                pointer
     &:hover
-      color importanterText
+      color               importanterText
   &.ignorable
-    color ignorable
+    color                 ignorable
   &.date
-    color titleColor
+    color                 titleColor
   &.name
     // color #60708f
-    color #6a7886
+    color                 #6a7886
   &.archive-item
-    color   #808f60
-    cursor  pointer
+    color                 #808f60
+    cursor                pointer
     &:hover
-      color #8bcf4b
+      color               #8bcf4b
     
 .point-section
   font-family             HFNSS
   color                   pointColor
   font-size               standardSize
-  // font-smooth             never
-  // webkit-font-smoothing   none
-  // -webkit-font-smoothing  none
   margin                  0 
   width                   80%
   height                  10em
@@ -95,62 +79,62 @@ body
   outline                 none
   outline                 none
   &.logic
-    font-family HFLLG
+    font-family           HFLLG
 
 
 .container
-  padding     0
-  margin      1em
-  box-sizing  border-box
-  width       auto
+  padding                 0
+  margin                  1em
+  box-sizing              border-box
+  width                   auto
 
 
 .row  
-  content         ''
-  display         table
-  clear           both
-  width           100%
+  content                 ''
+  display                 table
+  clear                   both
+  width                   100%
   &.big
-    min-height    3em
+    min-height            3em
  
 
 .paper
-  padding-left 2em
-  padding-top  2em
-  width 968px
-  float left
+  padding-left            2em
+  padding-top             2em
+  width                   968px
+  float                   left
 
 .archive
-  width 420px
-  float right
+  width                   420px
+  float                   right
   
 .column  
-  float         left 
-  position      relative
-  width         250px
+  float                   left 
+  position                relative
+  width                   250px
   &.big
-    width 440px
+    width                 440px
     
 .field
-  background-color     backgroundColor
-  border-style         solid
-  border-width         2px
-  border-color         veryIgnorable
-  font-family          HFNSS
-  color                veryIgnorable
-  font-size            standardSize
-  outline              none
-  width                400px
-  margin-top           2px
+  background-color        backgroundColor
+  border-style            solid
+  border-width            2px
+  border-color            veryIgnorable
+  font-family             HFNSS
+  color                   veryIgnorable
+  font-size               standardSize
+  outline                 none
+  width                   400px
+  margin-top              2px
   &.error
-    border-color       red
-    color              red
+    border-color          red
+    color                 red
 
 .mount
-  margin    0
-  padding   0
-  width     100%
-  height    100%
+  margin                  0
+  padding                 0
+  width                   100%
+  height                  100%
 
 .button
   background-color        almostBlack
@@ -160,14 +144,10 @@ body
   font-family             HFNSS
   color                   ignorable
   font-size               standardSize
-  // font-smooth             never
-  // webkit-font-smoothing   none
-  // -webkit-font-smoothing  none
   outline                 none
   width                   100%
   height                  1em
   margin                  0
   &:hover
-    background-color        almostBlack
-    color pointColor
-    // background-color        pointColor
+    background-color      almostBlack
+    color                           pointColor

@@ -15,6 +15,9 @@ module.exports = Title = Himesama.createClass
   goToTwitter: ->
     window.location.assign 'https://twitter.com/TheRealChadtech'
 
+  goToResume: ->
+    window.location.assign 'http://www.chadtech.us/resume'
+
   render: ->
     div className: 'container',
       div className:    'row',
@@ -35,3 +38,7 @@ module.exports = Title = Himesama.createClass
             className: 'point link'
             event:     click: @goToTwitter
             '@TheRealChadtech'
+          p 
+            className: 'point link'
+            event:     click: @goToResume
+            'Resume'

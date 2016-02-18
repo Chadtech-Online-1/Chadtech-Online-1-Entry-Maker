@@ -10,6 +10,7 @@ Title         = require './components/title'
 HorizontalBar = require './components/horizontal-bar'
 Body          = require './components/body'
 
+
 module.exports = Main = Himesama.createClass
 
   render: ->
@@ -18,8 +19,4 @@ module.exports = Main = Himesama.createClass
       Title()
       HorizontalBar()
       Body()
-
-
-
-
 
